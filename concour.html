@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cérémonie des Récompenses Cosplay 2025</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#8A2BE2", secondary: "#FF6B6B" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+      .hero-section {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520award-winning%2520cosplayers%2520on%2520stage%2520at%2520a%2520grand%2520ceremony%2C%2520wearing%2520elaborate%2520fantasy%2520and%2520anime%2520costumes%2C%2520with%2520dramatic%2520stage%2520lighting%2C%2520a%2520large%2520audience%2520in%2520the%2520background%2C%2520elegant%2520venue%2520with%2520purple%2520and%2520blue%2520lighting%2520accents&width=1920&height=1080&seq=cosplay1&orientation=landscape');
+          background-size: cover;
+          background-position: center;
+      }
+      .timeline-dot {
+          width: 20px;
+          height: 20px;
+          background-color: #8A2BE2;
+          border-radius: 50%;
+          position: absolute;
+          left: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+      .timeline-line {
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 1px;
+          background-color: #8A2BE2;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+      .custom-checkbox {
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+      }
+      .custom-checkbox input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+      }
+      .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          background-color: #fff;
+          border: 2px solid #8A2BE2;
+          border-radius: 4px;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+          content: "";
+          position: absolute;
+          display: block;
+          left: 6px;
+          top: 2px;
+          width: 5px;
+          height: 10px;
+          border: solid #8A2BE2;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between"
+      >
+        <div class="flex items-center">
+          <!-- <h1 class="text-3xl font-['Pacifico'] text-primary mr-2">logo</h1> -->
+          <span class="hidden md:inline-block text-lg font-semibold"
+            >MBOA Cosplay Awards</span
+          >
+        </div>
+
+        <nav class="hidden md:flex space-x-8 text-gray-700">
+          <a
+            href="#accueil"
+            class="hover:text-primary transition-colors font-medium"
+            >Accueil</a
+          >
+          <a
+            href="#categories"
+            class="hover:text-primary transition-colors font-medium"
+            >Catégories</a
+          >
+          <a
+            href="#inscription"
+            class="hover:text-primary transition-colors font-medium"
+            >Inscription</a
+          >
+          <a
+            href="#programme"
+            class="hover:text-primary transition-colors font-medium"
+            >Programme</a
+          >
+          <a
+            href="#galerie"
+            class="hover:text-primary transition-colors font-medium"
+            >Galerie</a
+          >
+          <a
+            href="#jury"
+            class="hover:text-primary transition-colors font-medium"
+            >Jury & Sponsors</a
+          >
+        </nav>
+
+        <div class="md:hidden flex items-center">
+          <button
+            id="mobileMenuButton"
+            class="text-gray-700 w-10 h-10 flex items-center justify-center"
+          >
+            <i class="ri-menu-line ri-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white w-full">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <a
+            href="#accueil"
+            class="block py-2 hover:text-primary transition-colors"
+            >Accueil</a
+          >
+          <a
+            href="#categories"
+            class="block py-2 hover:text-primary transition-colors"
+            >Catégories</a
+          >
+          <a
+            href="#inscription"
+            class="block py-2 hover:text-primary transition-colors"
+            >Inscription</a
+          >
+          <a
+            href="#programme"
+            class="block py-2 hover:text-primary transition-colors"
+            >Programme</a
+          >
+          <a
+            href="#galerie"
+            class="block py-2 hover:text-primary transition-colors"
+            >Galerie</a
+          >
+          <a
+            href="#jury"
+            class="block py-2 hover:text-primary transition-colors"
+            >Jury & Sponsors</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="accueil"
+      class="hero-section min-h-[600px] flex items-center text-white"
+    >
+      <div class="container mx-auto px-4 py-16 w-full">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Cérémonie des Récompenses Cosplay 2025
+          </h1>
+          <p class="text-xl mb-8">
+            Célébrez l'art du cosplay lors de notre prestigieuse cérémonie
+            annuelle. Rejoignez-nous pour une soirée mémorable où talent,
+            créativité et passion seront récompensés.
+          </p>
+
+          <div
+            class="bg-black/30 backdrop-blur-sm p-6 rounded-lg mb-8 inline-block"
+          >
+            <h3 class="text-xl font-semibold mb-3">Compte à rebours</h3>
+            <div class="flex space-x-4 text-center">
+              <div>
+                <div id="days" class="text-3xl font-bold">00</div>
+                <div class="text-sm">Jours</div>
+              </div>
+              <div>
+                <div id="hours" class="text-3xl font-bold">00</div>
+                <div class="text-sm">Heures</div>
+              </div>
+              <div>
+                <div id="minutes" class="text-3xl font-bold">00</div>
+                <div class="text-sm">Minutes</div>
+              </div>
+              <div>
+                <div id="seconds" class="text-3xl font-bold">00</div>
+                <div class="text-sm">Secondes</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#inscription"
+              class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-button font-semibold transition-all whitespace-nowrap"
+              >S'inscrire maintenant</a
+            >
+            <a
+              href="#programme"
+              class="bg-white hover:bg-gray-100 text-gray-800 px-8 py-3 rounded-button font-semibold transition-all whitespace-nowrap"
+              >Voir le programme</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Catégories de Récompenses
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Découvrez les différentes catégories dans lesquelles vous pouvez
+            concourir et les critères d'évaluation pour chacune d'entre elles.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Category 1 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div class="bg-primary/10 p-6 flex justify-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary"
+              >
+                <i class="ri-sword-fill ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Meilleur Cosplay Armure</h3>
+              <p class="text-gray-600 mb-4">
+                Récompense les cosplays avec les armures les plus
+                impressionnantes et détaillées.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Prix</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Trophée exclusif</li>
+                  <li>• Chèque de 1000€</li>
+                  <li>• Kit professionnel de matériaux</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Critères d'évaluation
+                </h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Complexité de fabrication</li>
+                  <li>• Finition et détails</li>
+                  <li>• Fonctionnalité</li>
+                  <li>• Fidélité au personnage</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div class="bg-primary/10 p-6 flex justify-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary"
+              >
+                <i class="ri-magic-fill ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Meilleur Cosplay Fantaisie</h3>
+              <p class="text-gray-600 mb-4">
+                Célèbre les costumes les plus créatifs et fantastiques de
+                l'univers fantasy.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Prix</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Trophée exclusif</li>
+                  <li>• Chèque de 800€</li>
+                  <li>• Séance photo professionnelle</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Critères d'évaluation
+                </h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Originalité</li>
+                  <li>• Utilisation des matériaux</li>
+                  <li>• Effets spéciaux</li>
+                  <li>• Impact visuel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div class="bg-primary/10 p-6 flex justify-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary"
+              >
+                <i class="ri-group-fill ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Meilleur Groupe</h3>
+              <p class="text-gray-600 mb-4">
+                Récompense les meilleures performances de groupe avec cohérence
+                et coordination.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Prix</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Trophée pour chaque membre</li>
+                  <li>• Chèque de 1500€ pour le groupe</li>
+                  <li>• Invitation VIP au prochain salon</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Critères d'évaluation
+                </h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Cohésion du groupe</li>
+                  <li>• Performance scénique</li>
+                  <li>• Qualité individuelle des costumes</li>
+                  <li>• Fidélité à l'univers représenté</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div class="bg-primary/10 p-6 flex justify-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary"
+              >
+                <i class="ri-lightbulb-fill ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">
+                Meilleure Innovation Technique
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Récompense l'utilisation innovante de technologies dans la
+                création de cosplay.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Prix</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Trophée exclusif</li>
+                  <li>• Chèque de 1200€</li>
+                  <li>• Kit électronique professionnel</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Critères d'évaluation
+                </h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Originalité technique</li>
+                  <li>• Complexité d'exécution</li>
+                  <li>• Intégration harmonieuse</li>
+                  <li>• Fonctionnalité</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div class="bg-primary/10 p-6 flex justify-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary"
+              >
+                <i class="ri-film-fill ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Meilleure Performance</h3>
+              <p class="text-gray-600 mb-4">
+                Célèbre les cosplayeurs qui incarnent parfaitement leur
+                personnage sur scène.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Prix</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Trophée exclusif</li>
+                  <li>• Chèque de 900€</li>
+                  <li>• Coaching avec un acteur professionnel</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Critères d'évaluation
+                </h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Interprétation du personnage</li>
+                  <li>• Présence scénique</li>
+                  <li>• Originalité de la performance</li>
+                  <li>• Réaction du public</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+          <div
+            class="bg-gray-50 rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          >
+            <div class="bg-primary/10 p-6 flex justify-center">
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary"
+              >
+                <i class="ri-star-fill ri-3x"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3">Prix du Public</h3>
+              <p class="text-gray-600 mb-4">
+                Décerné au cosplayeur ayant reçu le plus de votes du public
+                pendant l'événement.
+              </p>
+
+              <div class="mb-4">
+                <h4 class="font-semibold text-gray-800 mb-2">Prix</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Trophée exclusif</li>
+                  <li>• Chèque de 750€</li>
+                  <li>• Couverture médiatique spéciale</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-gray-800 mb-2">
+                  Critères d'évaluation
+                </h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Votes du public en ligne</li>
+                  <li>• Votes du public pendant l'événement</li>
+                  <li>• Engagement sur les réseaux sociaux</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="inscription" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Inscription au Concours
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Remplissez le formulaire ci-dessous pour participer à notre concours
+            de cosplay. Assurez-vous de fournir toutes les informations
+            nécessaires pour maximiser vos chances.
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+          <form id="registrationForm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  for="firstName"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Prénom</label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="lastName"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Nom</label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  required
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2"
+                  >Téléphone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label for="category" class="block text-gray-700 font-medium mb-2"
+                >Catégorie</label
+              >
+              <div class="relative">
+                <select
+                  id="category"
+                  class="appearance-none w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8 bg-white"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Choisissez une catégorie
+                  </option>
+                  <option value="armor">Meilleur Cosplay Armure</option>
+                  <option value="fantasy">Meilleur Cosplay Fantaisie</option>
+                  <option value="group">Meilleur Groupe</option>
+                  <option value="tech">Meilleure Innovation Technique</option>
+                  <option value="performance">Meilleure Performance</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <i class="ri-arrow-down-s-line"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="characterName"
+                class="block text-gray-700 font-medium mb-2"
+                >Nom du personnage</label
+              >
+              <input
+                type="text"
+                id="characterName"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="seriesName"
+                class="block text-gray-700 font-medium mb-2"
+                >Série/Jeu/Univers</label
+              >
+              <input
+                type="text"
+                id="seriesName"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="description"
+                class="block text-gray-700 font-medium mb-2"
+                >Description du costume</label
+              >
+              <textarea
+                id="description"
+                rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                required
+              ></textarea>
+            </div>
+
+            <div class="mb-6">
+              <label class="block text-gray-700 font-medium mb-2"
+                >Photos du cosplay (max 3)</label
+              >
+              <div
+                class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center"
+              >
+                <input
+                  type="file"
+                  id="cosplayPhotos"
+                  class="hidden"
+                  multiple
+                  accept="image/*"
+                />
+                <label for="cosplayPhotos" class="cursor-pointer">
+                  <div
+                    class="w-12 h-12 mx-auto mb-2 flex items-center justify-center text-gray-400"
+                  >
+                    <i class="ri-upload-cloud-line ri-2x"></i>
+                  </div>
+                  <p class="text-gray-700 font-medium">
+                    Cliquez pour télécharger vos photos
+                  </p>
+                  <p class="text-gray-500 text-sm mt-1">PNG, JPG jusqu'à 5MB</p>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label class="custom-checkbox">
+                <input type="checkbox" required />
+                <span class="checkmark"></span>
+                <span class="text-gray-700"
+                  >J'accepte les
+                  <a href="#" class="text-primary hover:underline"
+                    >conditions générales</a
+                  >
+                  et la
+                  <a href="#" class="text-primary hover:underline"
+                    >politique de confidentialité</a
+                  ></span
+                >
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-semibold transition-all whitespace-nowrap"
+            >
+              Soumettre ma candidature
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Program Section -->
+    <section id="programme" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Programme de l'Événement
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Découvrez le programme détaillé de notre cérémonie des récompenses
+            cosplay qui se tiendra le 15 août 2025 au Palais des Congrès de
+            Paris.
+          </p>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 mb-12">
+          <div class="w-full md:w-1/2">
+            <div class="bg-gray-50 rounded-lg shadow-md p-6 h-full">
+              <h3 class="text-2xl font-bold mb-6 text-primary">
+                Informations pratiques
+              </h3>
+
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-calendar-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Date</h4>
+                    <p class="text-gray-600">15 août 2025</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-map-pin-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Lieu</h4>
+                    <p class="text-gray-600">Palais des Congrès de Paris</p>
+                    <p class="text-gray-600">
+                      2 Place de la Porte Maillot, 75017 Paris
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-ticket-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Billets</h4>
+                    <p class="text-gray-600">Entrée standard: 25€</p>
+                    <p class="text-gray-600">
+                      Pass VIP: 75€ (accès backstage et cocktail)
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-information-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">
+                      Informations supplémentaires
+                    </h4>
+                    <p class="text-gray-600">
+                      Vestiaires sécurisés disponibles
+                    </p>
+                    <p class="text-gray-600">
+                      Espace réparation pour les cosplays
+                    </p>
+                    <p class="text-gray-600">Restauration sur place</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <div class="bg-gray-50 rounded-lg shadow-md p-6 h-full">
+              <div class="bg-primary/10 p-4 rounded-lg mb-6">
+                <div
+                  style="width: 100%; height: 300px; background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: contain; background-position: center; background-repeat: no-repeat;"
+                ></div>
+              </div>
+
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-train-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">
+                      Transports en commun
+                    </h4>
+                    <p class="text-gray-600">
+                      Métro: Ligne 1, station Porte Maillot
+                    </p>
+                    <p class="text-gray-600">
+                      RER: Ligne C, station Neuilly - Porte Maillot
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center text-primary mr-4"
+                  >
+                    <i class="ri-car-line ri-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Parking</h4>
+                    <p class="text-gray-600">
+                      Parking souterrain du Palais des Congrès
+                    </p>
+                    <p class="text-gray-600">
+                      Tarif spécial événement: 15€ la journée
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <h3 class="text-2xl font-bold mb-6 text-center">
+            Programme détaillé
+          </h3>
+
+          <div class="relative pl-8 space-y-8">
+            <div class="timeline-line"></div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">Ouverture des portes</h4>
+                  <span class="text-primary font-medium">13h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Accueil des participants et du public, remise des badges et
+                  des programmes.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">Exposition des cosplays</h4>
+                  <span class="text-primary font-medium">13h30 - 15h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Présentation des cosplays en compétition dans l'espace
+                  d'exposition. Le public peut voter pour le Prix du Public.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">Table ronde avec les juges</h4>
+                  <span class="text-primary font-medium">15h00 - 16h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Discussion avec les membres du jury sur les tendances
+                  actuelles du cosplay et conseils pour les participants.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">Performances sur scène</h4>
+                  <span class="text-primary font-medium">16h30 - 18h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Présentation des cosplays en compétition sur scène avec
+                  performances individuelles ou en groupe.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">Pause cocktail</h4>
+                  <span class="text-primary font-medium">18h00 - 19h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Pause cocktail et networking entre participants, juges et
+                  public.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">
+                    Cérémonie de remise des prix
+                  </h4>
+                  <span class="text-primary font-medium">19h30 - 21h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Annonce des gagnants dans chaque catégorie et remise des
+                  trophées et récompenses.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="timeline-dot"></div>
+              <div class="bg-gray-50 rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-lg">Soirée de clôture</h4>
+                  <span class="text-primary font-medium">21h30 - 00h00</span>
+                </div>
+                <p class="text-gray-600">
+                  Soirée festive avec DJ, photobooth et animations pour célébrer
+                  les lauréats et l'art du cosplay.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="galerie" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Galerie des Précédents Gagnants
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Découvrez les incroyables cosplays qui ont remporté des prix lors de
+            nos précédentes cérémonies.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Winner 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520a%2520female%2520cosplayer%2520wearing%2520an%2520elaborate%2520fantasy%2520armor%2520costume%2520with%2520glowing%2520elements%2C%2520standing%2520in%2520a%2520victory%2520pose%2520on%2520stage%2520with%2520dramatic%2520lighting%2C%2520holding%2520a%2520trophy%2C%2520extremely%2520detailed%2520costume%2520with%2520intricate%2520craftsmanship&width=600&height=400&seq=cosplay2&orientation=landscape"
+                alt="Gagnant Cosplay"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">Sophie Dubois</h3>
+                  <p class="text-gray-600">Samus Aran (Metroid Prime)</p>
+                </div>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >2024</span
+                >
+              </div>
+              <p class="text-gray-700 mb-3">Meilleure Innovation Technique</p>
+              <p class="text-gray-600 text-sm">
+                Armure complète avec éléments lumineux interactifs et canon
+                fonctionnel projetant des effets lumineux.
+              </p>
+            </div>
+          </div>
+
+          <!-- Winner 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520a%2520male%2520cosplayer%2520in%2520an%2520elaborate%2520fantasy%2520knight%2520armor%2520with%2520a%2520huge%2520sword%2C%2520posing%2520dramatically%2520on%2520stage%2520with%2520theatrical%2520lighting%2C%2520extremely%2520detailed%2520costume%2520with%2520weathered%2520metal%2520effect%2C%2520award-winning%2520craftsmanship&width=600&height=400&seq=cosplay3&orientation=landscape"
+                alt="Gagnant Cosplay"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">Thomas Leroy</h3>
+                  <p class="text-gray-600">Nightmare (Soul Calibur)</p>
+                </div>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >2024</span
+                >
+              </div>
+              <p class="text-gray-700 mb-3">Meilleur Cosplay Armure</p>
+              <p class="text-gray-600 text-sm">
+                Armure démoniaque complète avec épée Soul Edge de 2 mètres
+                entièrement articulée et effets lumineux.
+              </p>
+            </div>
+          </div>
+
+          <!-- Winner 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520a%2520group%2520of%2520four%2520cosplayers%2520dressed%2520as%2520characters%2520from%2520the%2520same%2520fantasy%2520universe%2C%2520posing%2520together%2520on%2520stage%2520with%2520theatrical%2520lighting%2C%2520holding%2520trophies%2C%2520extremely%2520detailed%2520and%2520coordinated%2520costumes%2C%2520award-winning%2520craftsmanship&width=600&height=400&seq=cosplay4&orientation=landscape"
+                alt="Gagnant Cosplay"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">Équipe Genshin</h3>
+                  <p class="text-gray-600">Personnages de Genshin Impact</p>
+                </div>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >2023</span
+                >
+              </div>
+              <p class="text-gray-700 mb-3">Meilleur Groupe</p>
+              <p class="text-gray-600 text-sm">
+                Groupe de 5 cosplayeurs représentant les personnages principaux
+                de Genshin Impact avec effets élémentaires.
+              </p>
+            </div>
+          </div>
+
+          <!-- Winner 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520a%2520female%2520cosplayer%2520in%2520an%2520elaborate%2520magical%2520girl%2520costume%2520with%2520flowing%2520fabric%2520and%2520glowing%2520elements%2C%2520mid-performance%2520on%2520stage%2520with%2520dramatic%2520lighting%2C%2520extremely%2520detailed%2520costume%2520with%2520intricate%2520embroidery%2520and%2520accessories&width=600&height=400&seq=cosplay5&orientation=landscape"
+                alt="Gagnant Cosplay"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">Émilie Renard</h3>
+                  <p class="text-gray-600">Madoka Kaname (Puella Magi)</p>
+                </div>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >2023</span
+                >
+              </div>
+              <p class="text-gray-700 mb-3">Meilleure Performance</p>
+              <p class="text-gray-600 text-sm">
+                Performance chorégraphiée avec effets spéciaux intégrés au
+                costume et transformation en direct sur scène.
+              </p>
+            </div>
+          </div>
+
+          <!-- Winner 5 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520a%2520male%2520cosplayer%2520in%2520an%2520elaborate%2520steampunk%2520costume%2520with%2520mechanical%2520wings%2520and%2520moving%2520parts%2C%2520posing%2520on%2520stage%2520with%2520theatrical%2520lighting%2C%2520extremely%2520detailed%2520costume%2520with%2520brass%2520and%2520copper%2520elements%2C%2520award-winning%2520craftsmanship&width=600&height=400&seq=cosplay6&orientation=landscape"
+                alt="Gagnant Cosplay"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">Antoine Mercier</h3>
+                  <p class="text-gray-600">Création originale steampunk</p>
+                </div>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >2022</span
+                >
+              </div>
+              <p class="text-gray-700 mb-3">Prix du Public</p>
+              <p class="text-gray-600 text-sm">
+                Costume steampunk avec ailes mécaniques déployables et système
+                de vapeur fonctionnel intégré.
+              </p>
+            </div>
+          </div>
+
+          <!-- Winner 6 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520photo%2520of%2520a%2520female%2520cosplayer%2520in%2520an%2520elaborate%2520fantasy%2520sorceress%2520costume%2520with%2520flowing%2520fabric%2520and%2520magical%2520elements%2C%2520posing%2520dramatically%2520on%2520stage%2520with%2520theatrical%2520lighting%2C%2520extremely%2520detailed%2520costume%2520with%2520intricate%2520embroidery%2520and%2520glowing%2520accessories&width=600&height=400&seq=cosplay7&orientation=landscape"
+                alt="Gagnant Cosplay"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <div>
+                  <h3 class="font-bold text-lg">Clara Fontaine</h3>
+                  <p class="text-gray-600">Yennefer (The Witcher)</p>
+                </div>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                  >2022</span
+                >
+              </div>
+              <p class="text-gray-700 mb-3">Meilleur Cosplay Fantaisie</p>
+              <p class="text-gray-600 text-sm">
+                Costume complet avec effets magiques et illusions d'optique
+                intégrées pour simuler la magie.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a
+            href="#"
+            class="inline-flex items-center text-primary hover:text-primary/80 font-semibold transition-colors"
+          >
+            Voir toute la galerie
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jury and Sponsors Section -->
+    <section id="jury" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Jury et Sponsors</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Découvrez les professionnels qui évalueront vos créations et les
+            partenaires qui rendent cet événement possible.
+          </p>
+        </div>
+
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-8 text-center">
+            Notre Jury d'Experts
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Jury Member 1 -->
+            <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520photo%2520of%2520a%2520female%2520costume%2520designer%2520in%2520her%252040s%2C%2520in%2520a%2520creative%2520studio%2520environment%2520with%2520fabric%2520samples%2520and%2520design%2520sketches%2C%2520professional%2520lighting%2C%2520neutral%2520background&width=600&height=400&seq=jury1&orientation=portrait"
+                  alt="Membre du Jury"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div class="p-6">
+                <h4 class="font-bold text-lg mb-1">Isabelle Moreau</h4>
+                <p class="text-primary font-medium mb-3">
+                  Costumière pour le cinéma
+                </p>
+                <p class="text-gray-600 mb-4">
+                  Avec plus de 20 ans d'expérience dans la création de costumes
+                  pour le cinéma et le théâtre, Isabelle a travaillé sur des
+                  productions internationales majeures.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-twitter-x-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-linkedin-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jury Member 2 -->
+            <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520photo%2520of%2520a%2520male%2520special%2520effects%2520artist%2520in%2520his%252030s%2C%2520in%2520a%2520workshop%2520with%2520props%2520and%2520materials%2C%2520professional%2520lighting%2C%2520neutral%2520background&width=600&height=400&seq=jury2&orientation=portrait"
+                  alt="Membre du Jury"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div class="p-6">
+                <h4 class="font-bold text-lg mb-1">Maxime Durand</h4>
+                <p class="text-primary font-medium mb-3">
+                  Artiste d'effets spéciaux
+                </p>
+                <p class="text-gray-600 mb-4">
+                  Spécialiste des prothèses et des effets spéciaux pour le
+                  cinéma et la télévision, Maxime est reconnu pour son travail
+                  innovant sur les créatures fantastiques.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-twitter-x-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-youtube-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Jury Member 3 -->
+            <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+              <div class="h-64 overflow-hidden">
+                <img
+                  src="https://readdy.ai/api/search-image?query=Professional%2520portrait%2520photo%2520of%2520a%2520female%2520professional%2520cosplayer%2520in%2520her%252020s%2C%2520in%2520a%2520creative%2520studio%2520environment%2520with%2520cosplay%2520elements%2C%2520professional%2520lighting%2C%2520neutral%2520background&width=600&height=400&seq=jury3&orientation=portrait"
+                  alt="Membre du Jury"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div class="p-6">
+                <h4 class="font-bold text-lg mb-1">Léa Martin</h4>
+                <p class="text-primary font-medium mb-3">
+                  Cosplayeuse professionnelle
+                </p>
+                <p class="text-gray-600 mb-4">
+                  Multiple championne internationale de cosplay, Léa partage son
+                  expertise à travers des ateliers et des masterclass dans le
+                  monde entier.
+                </p>
+                <div class="flex space-x-3">
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-twitch-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition-colors w-8 h-8 flex items-center justify-center"
+                  >
+                    <i class="ri-tiktok-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold mb-8 text-center">Nos Sponsors</h3>
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8"
+          >
+            <!-- Sponsor 1 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-brush-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">ArtCraft</h4>
+              <p class="text-gray-600 text-sm">
+                Fournisseur de matériaux pour artistes et cosplayeurs
+              </p>
+            </div>
+
+            <!-- Sponsor 2 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-gamepad-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">GameVerse</h4>
+              <p class="text-gray-600 text-sm">
+                Éditeur de jeux vidéo et partenaire officiel
+              </p>
+            </div>
+
+            <!-- Sponsor 3 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-camera-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">PixelShot</h4>
+              <p class="text-gray-600 text-sm">
+                Studio de photographie spécialisé en cosplay
+              </p>
+            </div>
+
+            <!-- Sponsor 4 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-store-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">CostumeWorld</h4>
+              <p class="text-gray-600 text-sm">
+                Boutique spécialisée en accessoires de cosplay
+              </p>
+            </div>
+
+            <!-- Sponsor 5 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-movie-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">CinéFan</h4>
+              <p class="text-gray-600 text-sm">
+                Festival de cinéma fantastique et partenaire média
+              </p>
+            </div>
+
+            <!-- Sponsor 6 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-book-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">MangaPlus</h4>
+              <p class="text-gray-600 text-sm">
+                Éditeur de mangas et sponsor des prix
+              </p>
+            </div>
+
+            <!-- Sponsor 7 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-hotel-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">Royal Palace</h4>
+              <p class="text-gray-600 text-sm">
+                Hôtel partenaire offrant des tarifs préférentiels
+              </p>
+            </div>
+
+            <!-- Sponsor 8 -->
+            <div
+              class="bg-white rounded-lg shadow-sm p-6 flex flex-col items-center justify-center text-center"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center text-primary mb-4"
+              >
+                <i class="ri-printer-fill ri-3x"></i>
+              </div>
+              <h4 class="font-bold text-lg mb-2">3D Creator</h4>
+              <p class="text-gray-600 text-sm">
+                Service d'impression 3D pour accessoires de cosplay
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center mt-10">
+            <p class="text-gray-600">
+              Intéressé pour devenir sponsor ?
+              <a href="#" class="text-primary hover:underline"
+                >Contactez-nous</a
+              >
+              pour plus d'informations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-['Pacifico'] mb-6">logo</h3>
+            <p class="text-gray-400 mb-6">
+              La plus prestigieuse cérémonie de récompenses dédiée à l'art du
+              cosplay en Afrique.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full"
+              >
+                <i class="ri-twitter-x-line"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full"
+              >
+                <i class="ri-youtube-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Liens Rapides</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#accueil"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#categories"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Catégories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#inscription"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Inscription</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#programme"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Programme</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#galerie"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Galerie</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#jury"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Jury & Sponsors</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Informations</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >À propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Règlement</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Éditions précédentes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Presse</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+            <p class="text-gray-400 mb-4">
+              Inscrivez-vous pour recevoir les dernières nouvelles et mises à
+              jour.
+            </p>
+            <form class="mb-4">
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Votre email"
+                  class="px-4 py-2 rounded-l-button border-none focus:outline-none text-gray-800 w-full"
+                />
+                <button
+                  type="submit"
+                  class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-button whitespace-nowrap"
+                >
+                  S'inscrire
+                </button>
+              </div>
+            </form>
+            <p class="text-gray-500 text-sm">
+              En vous inscrivant, vous acceptez notre politique de
+              confidentialité.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm mb-4 md:mb-0">
+              © 2025 Cérémonie des Récompenses Cosplay. Tous droits réservés.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-white text-sm transition-colors"
+                >Mentions légales</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-white text-sm transition-colors"
+                >Politique de confidentialité</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-white text-sm transition-colors"
+                >CGU</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script id="mobileMenuScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Hide mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      });
+    </script>
+
+    <script id="countdownScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set the date we're counting down to (August 15, 2025)
+        const countDownDate = new Date("Aug 15, 2025 13:00:00").getTime();
+
+        // Update the countdown every 1 second
+        const x = setInterval(function () {
+          // Get today's date and time
+          const now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          const distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result
+          document.getElementById("days").innerHTML = days
+            .toString()
+            .padStart(2, "0");
+          document.getElementById("hours").innerHTML = hours
+            .toString()
+            .padStart(2, "0");
+          document.getElementById("minutes").innerHTML = minutes
+            .toString()
+            .padStart(2, "0");
+          document.getElementById("seconds").innerHTML = seconds
+            .toString()
+            .padStart(2, "0");
+
+          // If the count down is finished, display some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+          }
+        }, 1000);
+      });
+    </script>
+
+    <script id="formScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("registrationForm");
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Here you would normally send the form data to a server
+            // For demo purposes, we'll just show an alert
+            alert(
+              "Merci pour votre inscription ! Nous examinerons votre candidature et vous contacterons prochainement.",
+            );
+
+            // Optionally reset the form
+            form.reset();
+          });
+        }
+
+        // File upload preview (simplified version)
+        const fileInput = document.getElementById("cosplayPhotos");
+        if (fileInput) {
+          fileInput.addEventListener("change", function () {
+            const fileLabel = fileInput.nextElementSibling;
+            if (fileInput.files.length > 0) {
+              fileLabel.querySelector("p").textContent =
+                `${fileInput.files.length} fichier(s) sélectionné(s)`;
+            } else {
+              fileLabel.querySelector("p").textContent =
+                "Cliquez pour télécharger vos photos";
+            }
+          });
+        }
+      });
+    </script>
+
+    <script id="smoothScrollScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Adjust for header height
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
